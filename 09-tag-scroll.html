@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tag Scroll Animation</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        animation: combined-animation 7s linear reverse;
+      }
+
+      .container {
+        display: flex;
+        height: 100vh;
+        padding: 20px;
+        flex-direction: column;
+        color: aliceblue;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        box-shadow: 0 0 30px black, 0 0 20px black, 0 0 20px grey;
+        text-shadow: 0 0 30px #fff, 0 0 20px rgb(84, 82, 82),
+          0 0 20px rgb(255, 255, 255);
+        overflow: hidden;
+      }
+
+      .content {
+        mask-image: radial-gradient(black 10%, transparent 90%);
+      }
+
+      .scroll {
+        display: flex;
+        animation: combined-animation var(--t) linear infinite alternate;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .scroll::after {
+        content: "";
+        background: linear-gradient(to left, #010101, #010101);
+        height: 100%;
+        width: 200px;
+        position: absolute;
+        z-index: 2;
+        left: 0;
+      }
+
+      .scroll::before {
+        content: "";
+        background: linear-gradient(to right, #010101, #010101);
+        height: 100%;
+        width: 200px;
+        position: absolute;
+        z-index: 2;
+        right: 0;
+      }
+
+      .container div {
+        white-space: nowrap;
+        margin: 20px 0;
+        position: relative;
+      }
+
+      @keyframes combined-animation {
+        100% {
+          transform: translate(-500px);
+        }
+      }
+
+      span {
+        background-color: #333;
+        padding: 12px 15px;
+        font-size: larger;
+        font-weight: 600;
+        border-radius: 5px;
+        white-space: nowrap;
+        margin: 0 0 0 40px;
+      }
+
+      span:hover {
+        background-color: #fff;
+        color: black;
+        transition: 1s;
+      }
+
+      .navbar__desktop {
+        display: flex;
+        background-color: #666;
+        box-shadow: 0 0 30px black, 0 0 20px white, 0 0 20px grey;
+        justify-content: space-evenly;
+        border-radius: 0.5rem;
+        padding: 10px;
+        flex-wrap: wrap;
+      }
+
+      .navbar__desktop a {
+        text-align: center;
+        text-decoration: none;
+        background-color: #010101;
+        padding: 5px 7px;
+        border-radius: 7px;
+        margin: 5px 10px;
+        color: white;
+        transition: 1s;
+        font-weight: 600;
+      }
+
+      .navbar__desktop a:hover {
+        background-color: white;
+        color: #010101;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar__desktop">
+        <a href="./04-button-bonch.html">Button Bounce</a>
+        <a href="./05-loading-circle.html">Loading Circle</a>
+        <a href="./06-loading-circle-two.html">Loading Circle 2</a>
+        <a href="./07-heart-pulse.html">Heart Pulse</a>
+        <a href="./08-infinite-scroll-information.html"
+          >Infinite Scroll Information</a
+        >
+        <a href="./09-tag-scroll.html">Tag Scroll Animation</a>
+      </div>
+      <h1>Tag Scroll Animation</h1>
+      <div class="content">
+        <div class="scroll" style="--t: 5s">
+          <div>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Javascript</span>
+            <span>Figma</span>
+            <span>ReactJS</span>
+            <span>NextJS</span>
+            <span>TailwindCSS</span>
+            <span>NodeJS</span>
+            <span>SQL</span>
+          </div>
+          <div>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Javascript</span>
+            <span>Figma</span>
+            <span>ReactJS</span>
+            <span>NextJS</span>
+            <span>TailwindCSS</span>
+            <span>NodeJS</span>
+            <span>SQL</span>
+          </div>
+          <div>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Javascript</span>
+            <span>Figma</span>
+            <span>ReactJS</span>
+            <span>NextJS</span>
+            <span>TailwindCSS</span>
+            <span>NodeJS</span>
+            <span>SQL</span>
+          </div>
+        </div>
+        <div class="scroll" style="--t: 2.5s">
+          <div>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Javascript</span>
+            <span>Figma</span>
+            <span>ReactJS</span>
+            <span>NextJS</span>
+            <span>TailwindCSS</span>
+            <span>NodeJS</span>
+            <span>SQL</span>
+          </div>
+          <div>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Javascript</span>
+            <span>Figma</span>
+            <span>ReactJS</span>
+            <span>NextJS</span>
+            <span>TailwindCSS</span>
+            <span>NodeJS</span>
+            <span>SQL</span>
+          </div>
+          <div>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Javascript</span>
+            <span>Figma</span>
+            <span>ReactJS</span>
+            <span>NextJS</span>
+            <span>TailwindCSS</span>
+            <span>NodeJS</span>
+            <span>SQL</span>
+          </div>
+        </div>
+        <div class="scroll" style="--t: 2s">
+          <div>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Javascript</span>
+            <span>Figma</span>
+            <span>ReactJS</span>
+            <span>NextJS</span>
+            <span>TailwindCSS</span>
+            <span>NodeJS</span>
+            <span>SQL</span>
+          </div>
+          <div>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Javascript</span>
+            <span>Figma</span>
+            <span>ReactJS</span>
+            <span>NextJS</span>
+            <span>TailwindCSS</span>
+            <span>NodeJS</span>
+            <span>SQL</span>
+          </div>
+          <div>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Javascript</span>
+            <span>Figma</span>
+            <span>ReactJS</span>
+            <span>NextJS</span>
+            <span>TailwindCSS</span>
+            <span>NodeJS</span>
+            <span>SQL</span>
+          </div>
+        </div>
+        <div class="scroll" style="--t: 4s">
+          <div>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Javascript</span>
+            <span>Figma</span>
+            <span>ReactJS</span>
+            <span>NextJS</span>
+            <span>TailwindCSS</span>
+            <span>NodeJS</span>
+            <span>SQL</span>
+          </div>
+          <div>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Javascript</span>
+            <span>Figma</span>
+            <span>ReactJS</span>
+            <span>NextJS</span>
+            <span>TailwindCSS</span>
+            <span>NodeJS</span>
+            <span>SQL</span>
+          </div>
+          <div>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Javascript</span>
+            <span>Figma</span>
+            <span>ReactJS</span>
+            <span>NextJS</span>
+            <span>TailwindCSS</span>
+            <span>NodeJS</span>
+            <span>SQL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

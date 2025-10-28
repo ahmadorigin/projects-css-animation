@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heart Pulse</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+        color: aliceblue;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        box-shadow: 0 0 30px black, 0 0 20px black, 0 0 20px grey;
+        text-shadow: 0 0 30px #fff, 0 0 20px rgb(84, 82, 82),
+          0 0 20px rgb(255, 255, 255);
+      }
+
+      .rectangle {
+        margin: 90px;
+        height: 100px;
+        width: 100px;
+        background-color: crimson;
+        box-shadow: 0 0 50px #fff, 0 0 20px red, 0 0 20px darkred;
+        position: relative;
+        transform: rotate(90deg);
+        animation: heart__pulse 1s ease infinite;
+      }
+
+      .rectangle::before {
+        content: "";
+        width: 150px;
+        height: 100px;
+        border-radius: 50px;
+        background-color: crimson;
+        /* box-shadow: 0 0 50px #fff, 0 0 20px red, 0 0 20px darkred; */
+        display: block;
+        position: absolute;
+        right: 0;
+      }
+
+      .rectangle::after {
+        content: "";
+        width: 100px;
+        height: 150px;
+        border-radius: 50px;
+        background-color: crimson;
+        /* box-shadow: 0 0 50px #fff, 0 0 20px red, 0 0 20px darkred; */
+        display: block;
+        position: absolute;
+        bottom: 0;
+      }
+
+      @keyframes heart__pulse {
+        0% {
+          transform: scale(0.8);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(0.8);
+        }
+      }
+
+      .navbar__desktop {
+        display: flex;
+        background-color: #666;
+        box-shadow: 0 0 30px black, 0 0 20px white, 0 0 20px grey;
+        justify-content: space-evenly;
+        border-radius: 0.5rem;
+        margin: 30px;
+        padding: 10px;
+        flex-wrap: wrap;
+      }
+
+      .navbar__desktop a {
+        text-align: center;
+        text-decoration: none;
+        background-color: #010101;
+        padding: 5px 7px;
+        border-radius: 7px;
+        margin: 5px 10px;
+        color: white;
+        transition: 1s;
+        font-weight: 600;
+      }
+
+      .navbar__desktop a:hover {
+        background-color: white;
+        color: #010101;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar__desktop">
+        <a href="./04-button-bonch.html">Button Bounce</a>
+        <a href="./05-loading-circle.html">Loading Circle</a>
+        <a href="./06-loading-circle-two.html">Loading Circle 2</a>
+        <a href="./07-heart-pulse.html">Heart Pulse</a>
+        <a href="./08-infinite-scroll-information.html"
+          >Infinite Scroll Information</a
+        >
+        <a href="./09-tag-scroll.html">Tag Scroll Animation</a>
+      </div>
+      <h1>Heart Pulse</h1>
+      <div class="rectangle"></div>
+    </div>
+  </body>
+</html>

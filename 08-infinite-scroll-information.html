@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infinite Scroll Information</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+        color: aliceblue;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        box-shadow: 0 0 30px black, 0 0 20px black, 0 0 20px grey;
+        text-shadow: 0 0 30px #fff, 0 0 20px rgb(84, 82, 82),
+          0 0 20px rgb(255, 255, 255);
+      }
+
+      .text-data {
+        overflow: hidden;
+        display: flex;
+        margin: 20px;
+        padding: 25px;
+        width: 300px;
+        border-radius: 10px;
+        background-image: linear-gradient(to right, #16161a);
+        mask-image: radial-gradient(#16161a 0%, transparent 60%);
+        border: 17px solid;
+        filter: blur(5px) grayscale(1);
+        transition: 1s;
+      }
+
+      .text-data:hover p {
+        animation-play-state: paused;
+      }
+
+      h1 {
+        filter: blur(5px) grayscale(1);
+        transition: 1s;
+      }
+
+      .container:hover .text-data,
+      .container:hover h1 {
+        filter: blur(0) grayscale(0);
+      }
+
+      p {
+        white-space: nowrap;
+        margin: 0 0 0 40px;
+        animation: combined-animation 7s linear infinite reverse;
+      }
+
+      @keyframes combined-animation {
+        0% {
+          transform: translate(-500px);
+        }
+      }
+
+      .navbar__desktop {
+        display: flex;
+        background-color: #666;
+        box-shadow: 0 0 30px black, 0 0 20px white, 0 0 20px grey;
+        justify-content: space-evenly;
+        border-radius: 0.5rem;
+        margin: 30px;
+        padding: 10px;
+        flex-wrap: wrap;
+      }
+
+      .navbar__desktop a {
+        text-align: center;
+        text-decoration: none;
+        background-color: #010101;
+        padding: 5px 7px;
+        border-radius: 7px;
+        margin: 5px 10px;
+        color: white;
+        transition: 1s;
+        font-weight: 600;
+      }
+
+      .navbar__desktop a:hover {
+        background-color: white;
+        color: #010101;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar__desktop">
+        <a href="./04-button-bonch.html">Button Bounce</a>
+        <a href="./05-loading-circle.html">Loading Circle</a>
+        <a href="./06-loading-circle-two.html">Loading Circle 2</a>
+        <a href="./07-heart-pulse.html">Heart Pulse</a>
+        <a href="./08-infinite-scroll-information.html"
+          >Infinite Scroll Information</a
+        >
+        <a href="./09-tag-scroll.html">Tag Scroll Animation</a>
+      </div>
+      <h1>Infinite Scroll Information</h1>
+      <div class="text-data">
+        <p>
+          Ini adalah informasi yang akan ditampilkan pada infinite scroll css
+          only.
+        </p>
+        <p>
+          Ini adalah informasi yang akan ditampilkan pada infinite scroll css
+          only.
+        </p>
+        <p>
+          Ini adalah informasi yang akan ditampilkan pada infinite scroll css
+          only.
+        </p>
+        <p>
+          Ini adalah informasi yang akan ditampilkan pada infinite scroll css
+          only.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button Bonche</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        color: aliceblue;
+        text-shadow: 0 0 30px #fff, 0 0 20px rgb(84, 82, 82),
+          0 0 20px rgb(255, 255, 255);
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: radial-gradient(
+          circle farthest-side at top left,
+          #010101,
+          blue
+        );
+      }
+
+      a {
+        background-color: blue;
+        box-shadow: 0 0 30px #fff, 0 0 20px rgb(47, 47, 255),
+          0 0 20px rgb(2, 2, 181);
+        color: #fff;
+        font-family: "Montserrat", sans-serif;
+        text-decoration: none;
+        padding: 1rem 1.3rem;
+        margin: 50px auto;
+        border-radius: 5px;
+        animation: rotation-button 1s ease-in-out infinite alternate;
+      }
+
+      a:hover {
+        display: none;
+      }
+
+      @keyframes rotation-button {
+        0%,
+        10%,
+        25% {
+          transform: translateY(0);
+        }
+        50% {
+        }
+        75% {
+          transform: translateY(calc(4vh - 1rem));
+        }
+        100% {
+          transform: translateY(2rem 0rem);
+        }
+      }
+
+      .navbar__desktop {
+        display: flex;
+        background-color: #666;
+        box-shadow: 0 0 30px black, 0 0 20px white, 0 0 20px grey;
+        justify-content: space-evenly;
+        border-radius: 0.5rem;
+        margin: 30px;
+        padding: 10px;
+        flex-wrap: wrap;
+      }
+
+      .navbar__desktop a {
+        text-align: center;
+        text-decoration: none;
+        background-color: #010101;
+        padding: 5px 7px;
+        border-radius: 7px;
+        margin: 5px 10px;
+        color: white;
+        transition: 1s;
+        font-weight: 600;
+      }
+
+      .navbar__desktop a:hover {
+        background-color: white;
+        color: #010101;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar__desktop">
+        <a href="./04-button-bonch.html">Button Bounce</a>
+        <a href="./05-loading-circle.html">Loading Circle</a>
+        <a href="./06-loading-circle-two.html">Loading Circle 2</a>
+        <a href="./07-heart-pulse.html">Heart Pulse</a>
+        <a href="./08-infinite-scroll-information.html"
+          >Infinite Scroll Information</a
+        >
+        <a href="./09-tag-scroll.html">Tag Scroll Animation</a>
+      </div>
+      <h1>Button Bounce</h1>
+      <a href="#">Click Me!</a>
+    </div>
+  </body>
+</html>
