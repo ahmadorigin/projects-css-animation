@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Infinite Scroll Animation</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #000;
+      }
+
+      .container {
+        display: flex;
+        padding: 20px;
+        flex-direction: column;
+        color: aliceblue;
+        justify-content: center;
+        align-items: center;
+        /* background-color: black; */
+        box-shadow: 0 0 30px black, 0 0 20px black, 0 0 20px grey;
+        text-shadow: 0 0 30px #fff, 0 0 20px rgb(84, 82, 82),
+          0 0 20px rgb(255, 255, 255);
+        overflow: hidden;
+        mask-image: linear-gradient(
+          90deg,
+          transparent,
+          #fff 50%,
+          #fff 50%,
+          transparent
+        );
+      }
+
+      img {
+        transform: scale(0.8);
+        width: 200px;
+        border-radius: 10px;
+        filter: blur(5px) grayscale();
+        transition: 1s;
+      }
+
+      img:hover {
+        filter: blur(0) grayscale(0%);
+        border: 3px solid white;
+        box-shadow: 0 0 20px white;
+        transform: scale(1);
+      }
+
+      .rectangle {
+        display: flex;
+        animation: combined-animation var(--t) linear infinite;
+        position: relative;
+        align-items: center;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      .rectangle:hover {
+        animation-play-state: paused;
+      }
+
+      @keyframes combined-animation {
+        100% {
+          transform: translate(-500px);
+        }
+      }
+
+      .navbar__desktop {
+        display: flex;
+        background-color: #666;
+        box-shadow: 0 0 30px black, 0 0 20px white, 0 0 20px grey;
+        justify-content: space-evenly;
+        border-radius: 0.5rem;
+        margin: 30px;
+        padding: 10px;
+        flex-wrap: wrap;
+      }
+
+      .navbar__desktop a {
+        text-align: center;
+        text-decoration: none;
+        background-color: #010101;
+        padding: 5px 7px;
+        border-radius: 7px;
+        margin: 5px;
+        color: white;
+        transition: 1s;
+        font-weight: 600;
+      }
+
+      .navbar__desktop a:hover {
+        background-color: white;
+        color: #010101;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar__desktop">
+        <a href="./index.html">Button Bounce</a>
+        <a href="./05-loading-circle.html">Loading Circle</a>
+        <a href="./06-loading-circle-two.html">Loading Circle 2</a>
+        <a href="./07-heart-pulse.html">Heart Pulse</a>
+        <a href="./08-infinite-scroll-information.html"
+          >Infinite Scroll Information</a
+        >
+        <a href="./09-tag-scroll.html">Tag Scroll Animation</a>
+        <a href="./10-image-infinite-scroll.html">Image Infinite Scroll</a>
+      </div>
+      <h1>Image Infinite Scroll</h1>
+      <div class="rectangle" style="--t: 7s">
+        <div class="rectangle__card">
+          <img src="./assets/download.jpg" alt="" />
+          <img src="./assets/icon-hmiko-toga.jpg" alt="" />
+          <img src="./assets/downloada.jpg" alt="" />
+          <img src="./assets/downlo.jpg" alt="" />
+          <img src="./assets/download.jpg" alt="" />
+          <img src="./assets/icon-hmiko-toga.jpg" alt="" />
+          <img src="./assets/downloada.jpg" alt="" />
+          <img src="./assets/downlo.jpg" alt="" />
+          <img src="./assets/download.jpg" alt="" />
+          <img src="./assets/icon-hmiko-toga.jpg" alt="" />
+          <img src="./assets/downloada.jpg" alt="" />
+          <img src="./assets/downlo.jpg" alt="" />
+        </div>
+        <div class="rectangle__card">
+          <img src="./assets/download.jpg" alt="" />
+          <img src="./assets/icon-hmiko-toga.jpg" alt="" />
+          <img src="./assets/downloada.jpg" alt="" />
+          <img src="./assets/downlo.jpg" alt="" />
+          <img src="./assets/download.jpg" alt="" />
+          <img src="./assets/icon-hmiko-toga.jpg" alt="" />
+          <img src="./assets/downloada.jpg" alt="" />
+          <img src="./assets/downlo.jpg" alt="" />
+          <img src="./assets/download.jpg" alt="" />
+          <img src="./assets/icon-hmiko-toga.jpg" alt="" />
+          <img src="./assets/downloada.jpg" alt="" />
+          <img src="./assets/downlo.jpg" alt="" />
+        </div>
+      </div>
+      <div class="rectangle" style="--t: 5s">
+        <div class="rectangle__card">
+          <img src="./assets/icon-hmiko-toga.jpg" alt="" />
+          <img src="./assets/download.jpg" alt="" />
+          <img src="./assets/downlo.jpg" alt="" />
+          <img src="./assets/downloada.jpg" alt="" />
+          <img src="./assets/icon-hmiko-toga.jpg" alt="" />
+          <img src="./assets/download.jpg" alt="" />
+          <img src="./assets/downlo.jpg" alt="" />
+          <img src="./assets/downloada.jpg" alt="" />
+          <img src="./assets/icon-hmiko-toga.jpg" alt="" />
+          <img src="./assets/download.jpg" alt="" />
+          <img src="./assets/downlo.jpg" alt="" />
+          <img src="./assets/downloada.jpg" alt="" />
+        </div>
+        <div class="rectangle__card">
+          <img src="./assets/icon-hmiko-toga.jpg" alt="" />
+          <img src="./assets/download.jpg" alt="" />
+          <img src="./assets/downlo.jpg" alt="" />
+          <img src="./assets/downloada.jpg" alt="" />
+          <img src="./assets/icon-hmiko-toga.jpg" alt="" />
+          <img src="./assets/download.jpg" alt="" />
+          <img src="./assets/downlo.jpg" alt="" />
+          <img src="./assets/downloada.jpg" alt="" />
+          <img src="./assets/icon-hmiko-toga.jpg" alt="" />
+          <img src="./assets/download.jpg" alt="" />
+          <img src="./assets/downlo.jpg" alt="" />
+          <img src="./assets/downloada.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
