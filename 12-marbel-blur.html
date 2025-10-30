@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marble Blur</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        display: flex;
+        height: 100vh;
+        padding: 20px;
+        flex-direction: column;
+        color: aliceblue;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        box-shadow: 0 0 30px black, 0 0 20px black, 0 0 20px grey;
+        text-shadow: 0 0 30px #fff, 0 0 20px rgb(84, 82, 82),
+          0 0 20px rgb(255, 255, 255);
+        overflow: hidden;
+        position: relative;
+      }
+
+      .circle__card {
+        position: absolute;
+        top: 200px;
+        height: 100;
+        width: 100%;
+        /* background-color: #fff; */
+      }
+
+      .circle {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: linear-gradient(red, blueviolet, blue);
+        filter: blur(3px);
+        box-shadow: 0 0 30px #fff;
+        margin: 50px auto;
+      }
+
+      .card1 {
+        animation: marble-ball 1s linear infinite;
+      }
+
+      .card2 {
+        animation: marble-ball 2s linear infinite;
+      }
+
+      .card3 {
+        animation: marble-ball 4s linear infinite;
+      }
+
+      .card4 {
+        animation: marble-ball 2.9s linear infinite;
+      }
+
+      .card5 {
+        animation: marble-ball 7s linear infinite;
+      }
+
+      .card6 {
+        animation: marble-ball 3.1s linear infinite;
+      }
+
+      .card7 {
+        animation: marble-ball 7.1s linear infinite;
+      }
+
+      @keyframes marble-ball {
+        0% {
+          transform: translate(0) translateY(0) rotate(0deg);
+        }
+        20% {
+          transform: translate(-22rem) translateY(30rem) rotate(360deg);
+        }
+        40% {
+          transform: translate(2rem) translateY(-10rem) rotate(0deg);
+        }
+        60% {
+          transform: translate(-12rem) translateY(00rem) rotate(360deg);
+        }
+        80% {
+          transform: translate(15rem) translateY(-50rem) rotate(0deg);
+        }
+        100% {
+          transform: translate(3rem) translateY(20rem) rotate(360deg);
+        }
+      }
+
+      .navbar__desktop {
+        display: flex;
+        background-color: #666;
+        box-shadow: 0 0 30px black, 0 0 20px white, 0 0 20px grey;
+        justify-content: space-evenly;
+        border-radius: 0.5rem;
+        margin: 30px;
+        padding: 10px;
+        flex-wrap: wrap;
+      }
+
+      .navbar__desktop a {
+        text-align: center;
+        text-decoration: none;
+        background-color: #010101;
+        padding: 5px 7px;
+        border-radius: 7px;
+        margin: 5px;
+        color: white;
+        transition: 1s;
+        font-weight: 600;
+      }
+
+      .navbar__desktop a:hover {
+        background-color: white;
+        color: #010101;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Where would you like to go?</h1>
+      <div class="navbar__desktop">
+        <a href="./index.html">Button Bounce</a>
+        <a href="./05-loading-circle.html">Loading Circle</a>
+        <a href="./06-loading-circle-two.html">Loading Circle 2</a>
+        <a href="./07-heart-pulse.html">Heart Pulse</a>
+        <a href="./08-infinite-scroll-information.html"
+          >Infinite Scroll Information</a
+        >
+        <a href="./09-tag-scroll.html">Tag Scroll Animation</a>
+        <a href="./10-image-infinite-scroll.html">Image Infinite Scroll</a>
+      </div>
+      <div class="circle__card">
+        <div class="circle card1"></div>
+        <div class="circle card2"></div>
+        <div class="circle card3"></div>
+        <div class="circle card4"></div>
+        <div class="circle card5"></div>
+        <div class="circle card6"></div>
+        <div class="circle card7"></div>
+      </div>
+    </div>
+  </body>
+</html>
