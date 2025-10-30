@@ -94,19 +94,29 @@
         }
       }
 
-      .navbar__desktop {
-        display: flex;
+      .container__navbar {
+        display: none;
+        text-align: right;
         background-color: #666;
         box-shadow: 0 0 30px black, 0 0 20px white, 0 0 20px grey;
-        justify-content: space-evenly;
         border-radius: 0.5rem;
         margin: 30px;
         padding: 10px;
-        flex-wrap: wrap;
+        width: 200px;
+        overflow: auto;
+        position: absolute;
+        top: 0;
+        z-index: 100;
       }
 
-      .navbar__desktop a {
+      ::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+      }
+
+      .container__navbar a {
         text-align: center;
+        line-height: 1;
         text-decoration: none;
         background-color: #010101;
         padding: 5px 7px;
@@ -117,26 +127,75 @@
         font-weight: 600;
       }
 
-      .navbar__desktop a:hover {
+      .container__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0.5rem 0;
+        width: 100%;
+      }
+
+      .container__navbar a:hover {
         background-color: white;
         color: #010101;
+      }
+
+      .nav__mobile {
+        padding: 0.2rem;
+        position: absolute;
+        top: 2vh;
+        right: 20%;
+      }
+
+      h1:hover .container__navbar {
+        display: flex;
+      }
+
+      .burger__menu {
+        box-shadow: 0 0 30px black, 0 0 20px white, 0 0 20px grey;
+        padding: 0.125rem 0.25rem;
+        border-radius: 0.125rem;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        flex-direction: column;
+        position: relative;
+      }
+
+      .burger__menu:hover .container__navbar {
+        display: flex;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <h1>Where would you like to go?</h1>
-      <div class="navbar__desktop">
-        <a href="./index.html">Button Bounce</a>
-        <a href="./05-loading-circle.html">Loading Circle</a>
-        <a href="./06-loading-circle-two.html">Loading Circle 2</a>
-        <a href="./07-heart-pulse.html">Heart Pulse</a>
-        <a href="./08-infinite-scroll-information.html"
-          >Infinite Scroll Information</a
-        >
-        <a href="./09-tag-scroll.html">Tag Scroll Animation</a>
-        <a href="./10-image-infinite-scroll.html">Image Infinite Scroll</a>
+      <div class="container__title">
+        <h1>Marble Blur Animation</h1>
+        <div class="burger__menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="30"
+            height="30"
+            fill="currentColor"
+          >
+            <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path>
+          </svg>
+          <div class="container__navbar">
+            <a href="./index.html">Button Bounce</a>
+            <a href="./05-loading-circle.html">Loading Circle</a>
+            <a href="./06-loading-circle-two.html">Loading Circle 2</a>
+            <a href="./07-heart-pulse.html">Heart Pulse</a>
+            <a href="./08-infinite-scroll-information.html"
+              >Infinite Scroll Information</a
+            >
+            <a href="./09-tag-scroll.html">Tag Scroll Animation</a>
+            <a href="./10-image-infinite-scroll.html">Image Infinite Scroll</a>
+            <a href="./12-marbel-blur.html">Marble Blur</a>
+          </div>
+        </div>
       </div>
+      <h1>Where would you like to go?</h1>
       <div class="circle__card">
         <div class="circle card1"></div>
         <div class="circle card2"></div>
