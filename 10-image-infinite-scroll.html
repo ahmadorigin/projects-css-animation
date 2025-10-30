@@ -45,12 +45,12 @@
         transform: scale(0.9);
         width: 150px;
         border-radius: 10px;
-        filter: blur(7px) grayscale();
+        filter: blur(7px) grayscale() invert(2);
         transition: 1s;
       }
 
       img:hover {
-        filter: blur(0) grayscale(0%);
+        filter: blur(0) grayscale(0%) hue-rotate(360deg) brightness(1.5);
         border: 3px solid white;
         box-shadow: 0 0 20px white;
         transform: scale(1);
@@ -62,6 +62,11 @@
         align-items: center;
         white-space: nowrap;
         overflow: hidden;
+        transition: 1s;
+      }
+
+      .rectangle:hover {
+        opacity: 50%;
       }
 
       .one {
@@ -72,9 +77,9 @@
         animation: combined-animation var(--t) linear infinite reverse;
       }
 
-      .rectangle:hover {
+      /* .rectangle:hover {
         animation-play-state: paused;
-      }
+      } */
 
       @keyframes combined-animation {
         100% {
@@ -206,6 +211,26 @@
           <img src="./assets/downloag.jpg" alt="" />
           <img src="./assets/downloah.jpg" alt="" />
         </div>
+        <div class="rectangle__card">
+          <img src="./assets/downloada.jpg" alt="" />
+          <img src="./assets/downloadb.jpg" alt="" />
+          <img src="./assets/downloadc.jpg" alt="" />
+          <img src="./assets/downloadd.jpg" alt="" />
+          <img src="./assets/downloade.jpg" alt="" />
+          <img src="./assets/downloadf.jpg" alt="" />
+          <img src="./assets/downloadg.jpg" alt="" />
+          <img src="./assets/downloadh.jpg" alt="" />
+        </div>
+        <div class="rectangle__card">
+          <img src="./assets/downloada.jpg" alt="" />
+          <img src="./assets/downloadb.jpg" alt="" />
+          <img src="./assets/downloadc.jpg" alt="" />
+          <img src="./assets/downloadd.jpg" alt="" />
+          <img src="./assets/downloade.jpg" alt="" />
+          <img src="./assets/downloadf.jpg" alt="" />
+          <img src="./assets/downloadg.jpg" alt="" />
+          <img src="./assets/downloadh.jpg" alt="" />
+        </div>
       </div>
       <div class="rectangle two" style="--t: 25s">
         <div class="rectangle__card">
@@ -227,6 +252,26 @@
           <img src="./assets/downloadf.jpg" alt="" />
           <img src="./assets/downloadg.jpg" alt="" />
           <img src="./assets/downloadh.jpg" alt="" />
+        </div>
+        <div class="rectangle__card">
+          <img src="./assets/downloaa.jpg" alt="" />
+          <img src="./assets/downloab.jpg" alt="" />
+          <img src="./assets/downloac.jpg" alt="" />
+          <img src="./assets/download.jpg" alt="" />
+          <img src="./assets/downloae.jpg" alt="" />
+          <img src="./assets/downloaf.jpg" alt="" />
+          <img src="./assets/downloag.jpg" alt="" />
+          <img src="./assets/downloah.jpg" alt="" />
+        </div>
+        <div class="rectangle__card">
+          <img src="./assets/downloaa.jpg" alt="" />
+          <img src="./assets/downloab.jpg" alt="" />
+          <img src="./assets/downloac.jpg" alt="" />
+          <img src="./assets/download.jpg" alt="" />
+          <img src="./assets/downloae.jpg" alt="" />
+          <img src="./assets/downloaf.jpg" alt="" />
+          <img src="./assets/downloag.jpg" alt="" />
+          <img src="./assets/downloah.jpg" alt="" />
         </div>
       </div>
     </div>
